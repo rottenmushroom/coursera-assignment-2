@@ -1,0 +1,111 @@
+/*
+You must implement the following breakpoints that will be considered desktop, tablet, and mobile. 
+The browser should display a desktop version of the site when the width of the browser window is 992px and above.
+Tablet view should appear only if the width of the browser window is between 768px and 991px, inclusively.
+Mobile view should appear only if the width of the browser is equal to or less than 767px.
+ */
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+	     font-family: 'Fira Sans', sans-serif;	
+}
+
+body {
+	width: 90%;
+	margin: 0 auto;
+	font-size: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: #548687;
+}
+
+a:hover {
+	background-color: #548687;
+}
+
+h1 {
+	width: 100%;
+	text-align: center;
+	font-size: 2.87em;
+	font-weight: 300;
+}
+
+section {
+	width: 100%;
+	margin: 30px auto;
+	text-align: left;
+}
+
+.food {
+	width: 100%;
+	margin-bottom: 35px;
+	border: 1px solid #000;
+	position: relative;
+	padding: 42px 10px 20px 10px;
+	background-color: #D4DFE6;
+	line-height: 25px;
+	font-size: 0.825em;
+}
+
+.title {
+	width: 100px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	padding: 5px;
+	font-size: 1.28em;
+	font-weight: 300;
+}
+
+#chicken {
+	background-color: #EE7785;
+}
+
+#beef {
+	background-color: #9DC3C1;
+}
+
+#sushi {
+	background-color: #84B1ED;
+}
+
+.source {
+	position: absolute;
+	padding-left: 10px;
+	bottom: 0;
+	left: 0;
+	font-size: 0.7em;
+}
+
+@media screen and (min-width: 992px) {
+	section {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+	.food:nth-child(1), .food:nth-child(2) {
+		margin-right: 20px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	section {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.food {
+		width: 100%;
+	}
+	.food:nth-child(1), .food:nth-child(2) {
+		width: 48%;
+	}
+	.food:nth-child(1) {
+		margin-right: 4%;
+	}
+}
